@@ -1,4 +1,15 @@
+<p>
+  <% @post.categories.each do |category| %>
+    <span class='badge'><%= category.name %></span>
+  <% end %>
+</p>
+
 <p class='lead'>
-  <= @post.title %>
+  <%= @post.title %>
+  <hr/>
+</p>
+
+<p class='lead'>
+  <%= @post.description %>
   <hr/>
 </p>
