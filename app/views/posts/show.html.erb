@@ -2,6 +2,8 @@
   <% @post.categories.each do |category| %>
     <span class='badge'><%= category.name %></span>
   <% end %>
+
+  <%= render @post.categories %>
 </p>
 
 <%= render 'shared/content_title', title: @post.title %>
