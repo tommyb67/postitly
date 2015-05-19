@@ -1,0 +1,8 @@
+<h4>Creating a new post</h4>
+
+<%= form_tag '/posts' do %>
+  <%= label_tag :title, 'Input a Title' %>
+  <%= text_field_tag :title %>
+  <br/>
+  <%= submit_tag 'Create Post', class 'btn btn-primary' %>
+<% end %>
