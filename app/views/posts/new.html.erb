@@ -1,8 +1,23 @@
 <h4>Creating a new post</h4>
 
+
+<h4>Rails form helpers</h4>
 <%= form_tag '/posts' do %>
   <%= label_tag :title, 'Input a Title' %>
   <%= text_field_tag :title %>
   <br/>
-  <%= submit_tag 'Create Post', class 'btn btn-primary' %>
+  <%= submit_tag 'Create Post', class: 'btn btn-primary' %>
+<% end %>
+
+
+<h4>Rail model backed form helper</h4>
+<%= form_for @post do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <br/>
+
+  <%= f.label :url %>
+  <%= f.text_field :url %>
+  <br/>
+  <%= submit_tag 'Create Post', class: 'btn btn-primary' %>
 <% end %>
