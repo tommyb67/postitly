@@ -11,6 +11,15 @@
 
 
 <h4>Rail model backed form helper</h4>
+
+<% if @post.errors.any? %>
+  <h5>There were some errors</h5>
+  <ul>
+    <%= @post.errors.full_messages %>
+    <li><%= msg %></li>
+  </ul>
+<% end %>
+
 <%= form_for @post do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>

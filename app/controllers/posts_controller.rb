@@ -13,7 +13,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(params[:post])
+    @post = Post.new(post_params)
 
     if @post.save
       flash[:notice] = "Your post was created."
@@ -21,6 +21,7 @@ class PostsController < ApplicationController
     else
       render 'new'
     end
+
   end
 
   def edit
