@@ -29,7 +29,6 @@ class PostsController < ApplicationController
   end
 
   def update
-    binding.pry
   end
 
 
